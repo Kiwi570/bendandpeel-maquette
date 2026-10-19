@@ -2,7 +2,7 @@
 import { BP } from '../core/env.js';
 import { byId, nextOpen, upcoming, status, STATUS_LABEL, venueOf, dayLong, closeLabel, tick, eventStart, SHOW } from '../core/dates.js';
 import { dateSpec } from '../core/paint.js';
-import { hydrate } from '../core/media.js';
+import { hydrate, GROK_READY } from '../core/media.js';
 import { buildFrise } from '../components/frise.js';
 import { buildBooking } from '../components/booking.js';
 import { buildMap } from '../components/map.js';
@@ -48,8 +48,10 @@ export default function () {
   const venueVis = document.querySelector('[data-venue-visual]');
   if (venueVis) {
     venueVis.__dateSpec = Object.assign({}, dateSpec(ev), { seed: ev.venue + '-lieu' });
-    if (!ev.img) { venueVis.dataset.grok = 'bp-lieu-' + ev.venue; venueVis.dataset.tag = `Visuel d’ambiance provisoire · Grok : bp-lieu-${ev.venue}`; }
-    venueVis.dataset.alt = `Visuel d’ambiance pour ${v.name}`;
+    /* Image d'ambiance du lieu (Grok) : aussi pour une date passée, si le lieu en a une. */
+    const lieu = 'bp-lieu-' + ev.venue;
+    if (GROK_READY[lieu] || !ev.img) { venueVis.dataset.grok = lieu; venueVis.dataset.tag = `Visuel d’ambiance provisoire · Grok : ${lieu}`; }
+    venueVis.dataset.alt = `Image d’ambiance pour ${v.name}, ce n’est pas une photo du lieu`;
     hydrate(venueVis);
   }
 

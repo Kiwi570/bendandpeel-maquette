@@ -59,7 +59,19 @@ export const GROK_READY = {
   'bp-ouverture-9x16': true,
   'bp-salutations-accueil': true,
   'bp-salutations-expo': true,
-  'bp-partition-nuit': true
+  'bp-partition-nuit': true,
+  'bp-rituel-cloture': true,
+  'bp-lieu-lampisterie': true,
+  'bp-lieu-bled': true,
+  'bp-lieu-exosquelette': true,
+  'bp-lieu-bajart': true,
+  'bp-lieu-dodecadome': true,
+  'bp-lieu-nidrouge': true,
+  'bp-lieu-colombia': true,
+  'bp-soutenir-mains': true,
+  'bp-soutenir-montage': true,
+  'bp-accueillir-salle': true,
+  'bp-texture-peau': true
 };
 
 function srcsetOf(file) {
