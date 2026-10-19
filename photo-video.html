@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Photo/Vidéo · Bend&amp;Peel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Photos et vidéos des soirées Bend&amp;Peel.">
+<meta name="theme-color" content="#120a14">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bend&amp;Peel">
+<meta property="og:title" content="Photo/Vidéo · Bend&amp;Peel">
+<meta property="og:description" content="Photos et vidéos des soirées Bend&amp;Peel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23120a14'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-style='italic' font-size='40' text-anchor='middle' fill='%23ff5a1f'%3E%26%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/fraunces-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="assets/fonts/intertight-var.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
+<script>(function(){var d=document.documentElement,c=null,r=false;try{c=localStorage.getItem('bp-calm')}catch(e){}try{r=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}if(c==='1'||(c===null&&r))d.classList.add('calm');try{if(sessionStorage.getItem('bp-peel')==='1')d.classList.add('is-entering')}catch(e){}d.classList.add('js')})();</script>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/vendor/SplitText.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+<body data-page="media">
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="hd">
+  <a class="logo" href="index.html" data-label="Accueil" aria-label="Bend&amp;Peel, accueil">Bend<i>&amp;</i>Peel</a>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="dates.html">Dates</a>
+    <a href="photo-video.html" aria-current="page">Photo/Vidéo</a>
+    <a href="sound.html">Sound</a>
+    <a href="soutenir.html">Soutenir</a>
+    <a href="accueillir.html">Accueillir</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="ctrls">
+    <button class="chip" type="button" data-sound aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 8.5c1 1 1.5 2.2 1.5 3.5s-.5 2.5-1.5 3.5"/><path d="M19.5 6c1.6 1.6 2.5 3.7 2.5 6s-.9 4.4-2.5 6"/></svg><span class="lbl">Activer le son</span></button>
+    <button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="menu"><span class="lbl">Menu</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h11"/></svg></button>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="chip menu-close" type="button">Fermer</button>
+  <nav aria-label="Menu">
+      <a href="index.html">Accueil</a>
+      <a href="dates.html">Dates</a>
+      <a href="photo-video.html" aria-current="page">Photo/Vidéo</a>
+      <a href="sound.html">Sound</a>
+      <a href="soutenir.html">Soutenir</a>
+      <a href="accueillir.html">Accueillir le spectacle</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+  <div class="menu-foot">contact@bendandpeel.fr<br>Arrivée uniquement entre 19 h et 20 h</div>
+</div>
+<main id="main">
+<section class="phero" data-heat="0.6">
+  <figure class="m phero__media" data-media="vidBeams" data-play data-notag data-sizes="100vw"></figure>
+  <div class="phero__inner wrap">
+    <span class="eyebrow">Photo / Vidéo</span>
+    <h1 data-split>Ce que la nuit a laissé.</h1>
+    <p class="lead">Sept photos et sept vidéos des soirées, reprises du site actuel.</p>
+  </div>
+</section>
+
+<section class="sec" data-heat="0.5" aria-labelledby="t-photos">
+  <div class="wrap stack" style="gap:30px">
+    <div class="row" style="justify-content:space-between;align-items:flex-end"><h2 id="t-photos" data-split>Photos</h2><span class="small">Touchez une photo pour l’agrandir.</span></div>
+    <div class="mosaic">
+      <button class="tile w-8" type="button" data-lightbox="photo01" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo01" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-4" type="button" data-lightbox="photo04" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo04" style="--r:4/5" data-liquid data-notag></figure></button><button class="tile w-12" type="button" data-lightbox="photo03" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo03" style="--r:21/8" data-liquid data-notag></figure></button><button class="tile w-5" type="button" data-lightbox="photo02" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo02" style="--r:4/3" data-liquid data-notag></figure></button><button class="tile w-7" type="button" data-lightbox="photo06" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo06" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-7" type="button" data-lightbox="photo05" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo05" style="--r:16/10" data-liquid data-notag></figure></button><button class="tile w-5" type="button" data-lightbox="photo07" data-cursor="label:Voir" aria-label="Agrandir la photo"><figure class="m " data-media="photo07" style="--r:4/3" data-liquid data-notag></figure></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" data-heat="0.7" aria-labelledby="t-videos">
+  <svg class="score" data-seed="videos" data-density="0.9" aria-hidden="true"></svg>
+  <div class="wrap stack" style="gap:30px">
+    <h2 id="t-videos" data-split>Vidéos</h2>
+    <div class="mosaic">
+      <button class="tile w-12" type="button" data-lightbox="vidHome" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Présentation</span><figure class="m " data-media="vidHome" style="--r:21/9" data-liquid data-notag></figure></button><button class="tile w-6" type="button" data-lightbox="vid01" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid01" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-6" type="button" data-lightbox="vid02" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid02" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-4" type="button" data-lightbox="vid03" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid03" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-4" type="button" data-lightbox="vid04" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid04" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-4" type="button" data-lightbox="vid05" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid05" style="--r:16/9" data-liquid data-notag></figure></button><button class="tile w-12" type="button" data-lightbox="vid06" data-video data-cursor="label:Lire" aria-label="Lire la vidéo"><span class="tile__lbl">Vidéo</span><figure class="m " data-media="vid06" style="--r:21/9" data-liquid data-notag></figure></button>
+    </div>
+    <p class="small">La vidéo de présentation est sous-titrée en anglais. Le son se lance quand tu ouvres une vidéo.</p>
+  </div>
+</section>
+
+<section class="sec" data-heat="0.3" aria-labelledby="t-visuels">
+  <div class="wrap stack" style="gap:24px">
+    <span class="eyebrow">Une image par soirée</span>
+    <h2 id="t-visuels" data-split>Les visuels des dates</h2>
+    <p class="body">Les visuels publiés pour chaque date sur le site actuel. Faites défiler, du plus récent au plus ancien.</p>
+  </div>
+  <div class="wrap"><div class="strip" data-visuals></div></div>
+</section>
+
+<section class="sec sec--tight" data-heat="0.2" aria-label="Crédits">
+  <div class="wrap grid">
+    <div class="c-1-5"><figure class="m " data-media="gTissu" style="--r:4/3" data-liquid></figure></div>
+    <div class="c-6-12 stack" style="gap:16px;align-self:center"><span class="eyebrow">Crédits</span><p class="body">Photographes et vidéastes : <span class="todo">à compléter</span></p><p class="body">Les photos du public sont utilisées comme sur le site actuel.</p></div>
+  </div>
+</section>
+<div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Média agrandi"><button class="chip lightbox__close" type="button">Fermer</button><div class="lightbox__stage"></div></div>
+</main>
+<footer class="ft">
+  <svg class="score" data-seed="footer" data-density="0.5" data-staves="2" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="ft__big" data-bend aria-hidden="true">Bend<i>&amp;</i>Peel</div>
+    <div class="ft__cols">
+      <div class="stack" style="gap:12px">
+        <h4>Écrire</h4>
+        <span class="mail" style="font-size:1.5rem">contact@bendandpeel.fr</span>
+        <button class="btn btn--ghost" type="button" data-copy="contact@bendandpeel.fr" data-copy-target=".ft .mail"><span class="btn-txt">Copier l’adresse</span></button>
+      </div>
+      <div><h4>Le spectacle</h4><ul><li><a class="lnk" href="index.html">Accueil</a></li><li><a class="lnk" href="dates.html">Dates</a></li><li><a class="lnk" href="photo-video.html">Photo/Vidéo</a></li><li><a class="lnk" href="sound.html">Sound</a></li></ul></div>
+      <div><h4>S’engager</h4><ul><li><a class="lnk" href="soutenir.html">Soutenir</a></li><li><a class="lnk" href="accueillir.html">Accueillir le spectacle</a></li><li><a class="lnk" href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Une soirée</h4><ul class="num"><li>Arrivée 19 h – 20 h</li><li>Salutations 19 h – 20 h 30</li><li>Partition 20 h 30 – 0 h 30</li></ul></div>
+    </div>
+    <p class="ft__note">Maquette de démonstration. Textes de présentation, dates et tarifs relevés sur bendandpeel.fr le 19 octobre 2026 ; titres et accroches ajoutés pour la maquette. La réservation et les formulaires sont simulés : rien n’est réservé ni envoyé. Les visuels marqués « provisoire » sont générés en code et seront remplacés. Polices Fraunces et Inter Tight (SIL Open Font License). Contours des départements : france-geojson.</p>
+  </div>
+</footer>
+<div class="dock"><button class="book-pill" type="button" aria-haspopup="dialog" aria-expanded="false" data-cursor="book:Dates">Réserver <span class="cd"><span>prochaine date</span><b></b></span></button></div>
+<div class="calm-dock"><button class="chip" type="button" data-calm aria-pressed="false"><span class="dot"></span><span class="lbl">Mode calme</span></button></div>
+<div class="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+  <div class="drawer__veil"></div>
+  <div class="drawer__panel">
+    <div class="drawer__head"><div class="stack" style="gap:10px"><span class="eyebrow">Réserver</span><h2 id="drawer-title">Prochaines dates</h2></div><button class="chip drawer__close" type="button">Fermer</button></div>
+    <div class="facts">
+      <div class="fact"><span>Arrivée</span><b>19 h – 20 h uniquement</b></div>
+      <div class="fact"><span>Soirée</span><b>19 h → 0 h 30</b></div>
+      <div class="fact"><span>Tarifs</span><b>dès 18 € · 30 € · 50 €</b></div>
+      <div class="fact"><span>Clôture</span><b>5 jours avant, 13 h</b></div>
+    </div>
+    <ul class="dlist"></ul>
+    <p class="small">Réservation en ligne uniquement, pas de vente sur place. Frais de billetterie : 0,75 € au tarif normal, 1,25 € au tarif soutien. Une adhésion annuelle à l’association est demandée, dès 3 €.</p>
+    <a class="btn btn--ghost" href="dates.html">Toutes les dates et la carte <span class="arr">→</span></a>
+  </div>
+</div>
+<div class="page-peel" aria-hidden="true"><div class="page-peel__front"><span class="page-peel__logo">Bend<i>&amp;</i>Peel</span><span class="page-peel__lbl"></span></div><div class="page-peel__flapwrap"><div class="page-peel__flap"></div></div></div>
+</body>
+</html>
