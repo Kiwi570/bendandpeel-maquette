@@ -54,7 +54,13 @@ export const MEDIA = {
 };
 
 /* Images Grok reçues : ajouter leur clé ici (ex. 'bp-salutations-accueil': true) une fois le fichier déposé. */
-export const GROK_READY = {};
+export const GROK_READY = {
+  'bp-ouverture-16x9': true,
+  'bp-ouverture-9x16': true,
+  'bp-salutations-accueil': true,
+  'bp-salutations-expo': true,
+  'bp-partition-nuit': true
+};
 
 function srcsetOf(file) {
   const s = SIZES[file];
