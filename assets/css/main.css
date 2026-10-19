@@ -375,7 +375,7 @@ body::before {
 .cap { margin-top: 10px; font-size: var(--fs-xs); color: var(--ink-3); }
 
 /* ---------- Héros (accueil) ---------- */
-.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; }
+.hero { position: relative; height: 100svh; min-height: 560px; overflow: hidden; background: var(--night); }
 .hero__gl, .hero__fallback { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero__fallback {
   background:
@@ -386,6 +386,12 @@ body::before {
   animation: drift 18s ease-in-out infinite alternate;
 }
 .has-gl .hero__fallback { opacity: 0; animation: none; }
+/* Chargement : le fond de secours n'apparaît que si WebGL ne prend pas le relais ;
+   le contenu rempli par les scripts reste masqué jusqu'à ce que la page soit prête. */
+.js .hero__fallback { opacity: 0; transition: opacity 0.8s var(--ease); }
+.js.gl-off .hero__fallback { opacity: 1; }
+.js:not(.is-ready) .hero__inner, .js:not(.is-ready) [data-wait] { visibility: hidden; opacity: 0; }
+[data-wait] { transition: opacity 0.6s var(--ease); }
 @keyframes drift { to { transform: scale(1.12) rotate(4deg); filter: hue-rotate(-18deg); } }
 .hero__grain {
   position: absolute; inset: -50%; z-index: 2; pointer-events: none; opacity: 0.09; mix-blend-mode: overlay;

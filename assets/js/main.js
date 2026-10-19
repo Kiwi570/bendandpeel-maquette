@@ -20,9 +20,17 @@ const PAGES = {
 
 const fontsReady = () => Promise.race([document.fonts ? document.fonts.ready : Promise.resolve(), new Promise((r) => setTimeout(r, 1500))]);
 
+/* La page est prête : le contenu rempli par les scripts apparaît, la transition d'entrée peut se lever. */
+function ready() {
+  const r = document.documentElement;
+  if (r.classList.contains('is-ready')) return;
+  r.classList.add('is-ready');
+  document.dispatchEvent(new Event('bp:ready'));
+}
+
 async function boot() {
   const gsap = window.gsap;
-  if (!gsap || !window.ScrollTrigger) { document.documentElement.classList.add('calm', 'no-motion'); return; }
+  if (!gsap || !window.ScrollTrigger) { document.documentElement.classList.add('calm', 'no-motion', 'gl-off'); ready(); return; }
   injectFilters();
   initScroll();
   initPageTransition();
@@ -36,6 +44,8 @@ async function boot() {
     try { const mod = await loader(); if (mod.default) await mod.default(); }
     catch (e) { console.error('Page', BP.page, e); }
   }
+  document.querySelectorAll('[data-cd]').forEach(tick);
+  ready();
   hydrateAll();
   initScores();
   initPeelStages();
@@ -49,11 +59,9 @@ async function boot() {
   initTilt();
   initScrollBend();
   initLiquidHover();
-  document.querySelectorAll('[data-cd]').forEach(tick);
   window.ScrollTrigger.sort();
   window.ScrollTrigger.refresh();
   restoreScroll();
-  document.documentElement.classList.add('is-ready');
   window.addEventListener('load', () => window.ScrollTrigger.refresh());
 }
 

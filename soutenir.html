@@ -15,7 +15,8 @@
 <link rel="preload" href="assets/fonts/fraunces-var.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/fonts/intertight-var.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/css/main.css">
-<script>(function(){var d=document.documentElement,c=null,r=false;try{c=localStorage.getItem('bp-calm')}catch(e){}try{r=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}if(c==='1'||(c===null&&r))d.classList.add('calm');try{if(sessionStorage.getItem('bp-peel')==='1')d.classList.add('is-entering')}catch(e){}d.classList.add('js')})();</script>
+<style>html{background:#120a14;color-scheme:dark}</style>
+<script>(function(){var d=document.documentElement,c=null,r=false;try{c=localStorage.getItem('bp-calm')}catch(e){}try{r=matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}if(c==='1'||(c===null&&r))d.classList.add('calm');try{if(sessionStorage.getItem('bp-peel')==='1')d.classList.add('is-entering')}catch(e){}d.classList.add('js');setTimeout(function(){if(d.classList.contains('is-ready'))return;if(!d.classList.contains('has-gl'))d.classList.add('gl-off');d.classList.add('is-ready');document.dispatchEvent(new Event('bp:ready'))},5000)})();</script>
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/SplitText.min.js" defer></script>
@@ -137,7 +138,7 @@
     <p class="ft__note">Maquette de démonstration. Textes de présentation, dates et tarifs relevés sur bendandpeel.fr le 19 octobre 2026 ; titres et accroches ajoutés pour la maquette. La réservation et les formulaires sont simulés : rien n’est réservé ni envoyé. Les visuels marqués « provisoire » sont générés en code et seront remplacés. Polices Fraunces et Inter Tight (SIL Open Font License). Contours des départements : france-geojson.</p>
   </div>
 </footer>
-<div class="dock"><button class="book-pill" type="button" aria-haspopup="dialog" aria-expanded="false" data-cursor="book:Dates">Réserver <span class="cd"><span>prochaine date</span><b></b></span></button></div>
+<div class="dock"><button class="book-pill" type="button" aria-haspopup="dialog" aria-expanded="false" data-cursor="book:Dates">Réserver <span class="cd" data-wait><span>prochaine date</span><b></b></span></button></div>
 <div class="calm-dock"><button class="chip" type="button" data-calm aria-pressed="false"><span class="dot"></span><span class="lbl">Mode calme</span></button></div>
 <div class="drawer" hidden role="dialog" aria-modal="true" aria-labelledby="drawer-title">
   <div class="drawer__veil"></div>

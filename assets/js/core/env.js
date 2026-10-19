@@ -44,6 +44,7 @@ Object.assign(BP, {
 });
 
 root.classList.toggle('has-gl', BP.gl && !BP.calm);
+root.classList.toggle('gl-off', !(BP.gl && !BP.calm));
 root.classList.toggle('no-gl', !BP.gl);
 
 /* Bascule du mode calme : on mémorise, on garde la position, on recharge proprement. */

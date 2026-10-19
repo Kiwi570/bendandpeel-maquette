@@ -178,12 +178,16 @@ export function initPageTransition() {
   if (root.classList.contains('is-entering')) {
     wrap.classList.add('is-on');
     surf.size();
-    if (BP.calm) {
-      gsap.to(wrap, { opacity: 0, duration: 0.3, onComplete: () => { wrap.classList.remove('is-on'); root.classList.remove('is-entering'); gsap.set(wrap, { opacity: 1 }); } });
-    } else {
-      apply();
-      gsap.to(st, { t: 1, duration: 1.05, ease: 'power3.inOut', delay: 0.08, onUpdate: apply, onComplete: () => { wrap.classList.remove('is-on'); root.classList.remove('is-entering'); } });
-    }
+    apply();
+    /* Le rideau ne se lève qu'une fois la page prête, pour ne jamais montrer une page à moitié montée. */
+    const leave = () => {
+      if (BP.calm) {
+        gsap.to(wrap, { opacity: 0, duration: 0.3, onComplete: () => { wrap.classList.remove('is-on'); root.classList.remove('is-entering'); gsap.set(wrap, { opacity: 1 }); } });
+      } else {
+        gsap.to(st, { t: 1, duration: 1.05, ease: 'power3.inOut', delay: 0.08, onUpdate: apply, onComplete: () => { wrap.classList.remove('is-on'); root.classList.remove('is-entering'); } });
+      }
+    };
+    if (root.classList.contains('is-ready')) leave(); else document.addEventListener('bp:ready', leave, { once: true });
   }
 
   document.addEventListener('click', (e) => {

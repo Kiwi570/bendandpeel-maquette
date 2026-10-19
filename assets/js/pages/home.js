@@ -19,11 +19,12 @@ function hero() {
   const heroEl = stage.querySelector('.hero');
   const title = document.getElementById('hero-title');
   let membrane = null;
+  const glOff = () => { const r = document.documentElement; r.classList.remove('has-gl'); r.classList.add('gl-off'); };
   if (BP.gl) {
     try {
       membrane = createMembrane(heroEl, { heat: 0.2, reveal: BP.calm ? 1 : 0 });
-      heroEl.addEventListener('gl:fallback', () => document.documentElement.classList.remove('has-gl'));
-    } catch (e) { document.documentElement.classList.remove('has-gl'); }
+      heroEl.addEventListener('gl:fallback', glOff);
+    } catch (e) { glOff(); }
   }
   const letters = liveLetters(title, { w: 520 });
   /* Image Grok de l'ouverture : fond de la version sans WebGL, dès qu'elle est livrée. */

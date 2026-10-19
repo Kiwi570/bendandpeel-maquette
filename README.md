@@ -1,4 +1,4 @@
-# Bend&Peel — maquette v3
+# Bend&Peel — maquette v4
 
 Site statique (HTML, CSS, JavaScript), sans étape de construction, prêt pour Vercel.
 
